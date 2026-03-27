@@ -362,6 +362,15 @@ body {
     top: 0;
     height: 100%;
     padding: 1rem 0;
+    align-items: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .form-wrap {
+    width: min(360px, 86%);
+    text-align: center;
+    margin: 0 auto;
   }
 
   .sign-in-side,
