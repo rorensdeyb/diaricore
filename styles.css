@@ -18,20 +18,21 @@ body {
 
 .login-card {
   border-radius: 1.2rem;
-  background: var(--diari-card);
+  background: transparent;
   backdrop-filter: blur(7px);
   overflow: visible;
 }
 
 .ad-panel {
-  background: linear-gradient(165deg, #f7fbf8 0%, #edf6f4 65%, #e7f0ee 100%);
+  background: #b7d8cb; /* more “colored side” look */
   color: #1f2a37;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.5rem;
-  border-right: 1px solid #d9e7e4;
-  min-height: 100%;
+  border-right: 1px solid rgba(31, 42, 55, 0.12);
+  min-height: 560px;
+  padding-top: 1rem;
 }
 
 .ad-icon-wrap {
