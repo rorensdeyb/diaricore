@@ -50,7 +50,7 @@ body {
   right: 0;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(12%);
+  transform: translateX(8%);
 }
 
 .sign-in-side {
@@ -153,7 +153,7 @@ body {
 .overlay-panel {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(160deg, #7da897 0%, #6c9a88 100%);
@@ -221,13 +221,13 @@ body {
 }
 
 .auth-shell.is-signup .sign-up-side {
-  transform: translateX(-100%);
+  transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
 }
 
 .auth-shell.is-signup .sign-in-side {
-  transform: translateX(-100%);
+  transform: translateX(8%);
   opacity: 0;
   pointer-events: none;
 }
