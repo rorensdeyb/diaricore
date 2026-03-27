@@ -1,0 +1,52 @@
+:root {
+  --diari-bg-1: #edf6f4;
+  --diari-bg-2: #e3eef8;
+  --diari-card: rgba(255, 255, 255, 0.92);
+  --diari-primary: #4f7f84;
+  --diari-primary-hover: #426e73;
+  --diari-text: #1f2a37;
+}
+
+body {
+  margin: 0;
+  color: var(--diari-text);
+  background: radial-gradient(circle at 20% 20%, var(--diari-bg-1), transparent 35%),
+    radial-gradient(circle at 85% 80%, #dfe8f4, transparent 35%),
+    linear-gradient(135deg, #f6fbf9 0%, var(--diari-bg-2) 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-card {
+  border-radius: 1.2rem;
+  background: var(--diari-card);
+  backdrop-filter: blur(7px);
+}
+
+.brand-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+}
+
+.form-control {
+  border-color: #d4dee8;
+}
+
+.form-control:focus {
+  border-color: #8fb1b6;
+  box-shadow: 0 0 0 0.2rem rgba(79, 127, 132, 0.2);
+}
+
+.btn-primary {
+  border: 0;
+  background-color: var(--diari-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--diari-primary-hover);
+}
+
+.link-secondary:hover {
+  color: var(--diari-primary) !important;
+}
