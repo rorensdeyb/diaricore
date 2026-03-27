@@ -56,6 +56,10 @@
                 </span>
                 Continue with Google
               </button>
+              <div class="text-center mt-3">
+                <span class="text-muted">Already have an account? </span>
+                <a href="#" class="signin-link tiny-link font-weight-bold text-primary">Log in</a>
+              </div>
             </form>
           </div>
         </div>
@@ -81,10 +85,6 @@
               </div>
               <div class="text-end mb-4"><a href="#" class="tiny-link">Forgot password?</a></div>
               <button type="submit" class="btn action-btn mb-3">Sign In</button>
-              <div class="text-center mt-3">
-                <span class="text-muted">Don't have an account? </span>
-                <a href="#" class="signup-link tiny-link">Sign up</a>
-              </div>
               <div class="social-divider"><span>or continue with</span></div>
               <button type="button" class="btn continue-btn mt-3">
                 <span class="google-icon" aria-hidden="true">
@@ -97,6 +97,10 @@
                 </span>
                 Continue with Google
               </button>
+              <div class="text-center mt-3">
+                <span class="text-muted">Don't have an account? </span>
+                <a href="#" class="signup-link tiny-link font-weight-bold text-primary">Sign up</a>
+              </div>
             </form>
           </div>
         </div>
@@ -121,6 +125,7 @@
         const shell = document.getElementById("authShell");
         const switchers = document.querySelectorAll(".switch-btn");
         const mobileSignupLink = document.querySelector(".signup-link");
+        const mobileSigninLink = document.querySelector(".signin-link");
         
         // Desktop overlay switchers
         switchers.forEach((btn) => {
@@ -135,6 +140,12 @@
         mobileSignupLink?.addEventListener("click", (e) => {
           e.preventDefault();
           shell.classList.add("is-signup");
+        });
+
+        // Mobile signin link functionality
+        mobileSigninLink?.addEventListener("click", (e) => {
+          e.preventDefault();
+          shell.classList.remove("is-signup");
         });
 
         // Password visibility toggle

@@ -158,13 +158,25 @@ body {
 }
 
 .tiny-link {
-  color: var(--muted);
-  font-size: 0.87rem;
+  font-size: 0.85rem;
+  color: #6b7280;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .tiny-link:hover {
-  color: var(--teal-deep);
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+.tiny-link.text-primary {
+  color: var(--teal) !important;
+  font-weight: 600;
+}
+
+.tiny-link.text-primary:hover {
+  color: var(--teal-deep) !important;
+  text-decoration: underline;
 }
 
 .action-btn {
@@ -333,17 +345,14 @@ body {
   }
 
   .overlay-panel {
-    position: static;
-    width: 100%;
-    height: 230px;
-    transform: none !important;
+    display: none;
   }
 
   .form-side {
     width: 100%;
     left: 0;
-    top: 230px;
-    height: calc(100% - 230px);
+    top: 0;
+    height: 100%;
     padding: 1rem 0;
   }
 
@@ -364,28 +373,6 @@ body {
     min-height: 760px;
     width: 100%;
     box-shadow: 0 12px 28px rgba(20, 35, 45, 0.12);
-  }
-
-  .overlay-panel {
-    height: 210px;
-  }
-
-  .overlay-content {
-    padding: 1.25rem;
-  }
-
-  .overlay-content h2 {
-    font-size: clamp(1.55rem, 7vw, 2rem);
-    margin-bottom: 0.5rem;
-  }
-
-  .overlay-content p {
-    font-size: 0.92rem;
-  }
-
-  .form-side {
-    top: 210px;
-    height: calc(100% - 210px);
   }
 
   .form-wrap {
@@ -417,15 +404,6 @@ body {
   .auth-shell {
     min-height: 740px;
     border-radius: 10px;
-  }
-
-  .overlay-panel {
-    height: 196px;
-  }
-
-  .form-side {
-    top: 196px;
-    height: calc(100% - 196px);
   }
 
   .brand-mark {
