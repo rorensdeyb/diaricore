@@ -24,6 +24,12 @@ body {
 
 .ad-panel {
   background: linear-gradient(165deg, #f7fbf8 0%, #edf6f4 65%, #e7f0ee 100%);
+  color: #1f2a37;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #d9e7e4;
+  min-height: 100%;
 }
 
 .ad-icon-wrap {
@@ -51,12 +57,14 @@ body {
 .ad-subtitle {
   color: #5b6676;
   max-width: 520px;
+  line-height: 1.6;
 }
 
 .feature-card {
   border: 1px solid #d8e6e4;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(47, 78, 84, 0.08);
 }
 
 .feature-icon {
@@ -149,9 +157,11 @@ body {
   color: var(--diari-primary-hover);
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .ad-panel {
+    justify-content: flex-start;
     border-bottom: 1px solid #deebea;
+    border-right: 0;
   }
 }
 
