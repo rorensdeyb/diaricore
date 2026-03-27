@@ -349,9 +349,9 @@ body {
 @media (max-width: 992px) {
   .auth-shell {
     height: auto !important;
-    min-height: auto !important;
+    min-height: 500px !important;
     border-radius: 12px;
-    overflow: visible !important;
+    overflow: visible;
   }
 
   .overlay-panel {
