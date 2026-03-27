@@ -384,6 +384,13 @@ body {
     margin-bottom: 0;
   }
 
+  /* Reduce space below signup link on mobile */
+  @media (max-width: 992px) {
+    .text-center.mt-3 {
+      margin-bottom: -3rem;
+    }
+  }
+
   .sign-in-side,
   .sign-up-side,
   .auth-shell.is-signup .sign-in-side,
@@ -398,7 +405,7 @@ body {
   }
 
   .auth-shell {
-    min-height: auto;
+    min-height: 760px;
     width: 100%;
     box-shadow: 0 12px 28px rgba(20, 35, 45, 0.12);
   }
@@ -430,7 +437,7 @@ body {
 
 @media (max-width: 480px) {
   .auth-shell {
-    min-height: auto;
+    min-height: 740px;
     border-radius: 10px;
   }
 
