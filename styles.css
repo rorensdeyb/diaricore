@@ -193,11 +193,13 @@ body {
 .overlay-left {
   opacity: 0;
   transform: translateX(-22%);
+  pointer-events: none;
 }
 
 .overlay-right {
   opacity: 1;
   transform: translateX(0);
+  pointer-events: auto;
 }
 
 .ghost-btn {
@@ -236,11 +238,13 @@ body {
 .auth-shell.is-signup .overlay-left {
   opacity: 1;
   transform: translateX(0);
+  pointer-events: auto;
 }
 
 .auth-shell.is-signup .overlay-right {
   opacity: 0;
   transform: translateX(24%);
+  pointer-events: none;
 }
 
 @media (max-width: 992px) {
