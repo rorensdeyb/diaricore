@@ -366,6 +366,7 @@ body {
     padding: 2rem 1rem 0.5rem 1rem;
     align-items: flex-start;
     display: block;
+    margin-bottom: -8rem;
   }
 
   .form-wrap {
