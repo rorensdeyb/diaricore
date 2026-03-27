@@ -372,8 +372,8 @@ body {
   .form-wrap {
     width: min(360px, 86%);
     text-align: center;
-    margin: 2rem auto -8rem auto !important;
-    padding-bottom: 0 !important;
+    margin: 2rem auto -4rem auto;
+    padding-bottom: 0;
   }
 
   .form-side form {
