@@ -158,13 +158,33 @@ body {
 }
 
 .tiny-link {
-  color: var(--muted);
-  font-size: 0.87rem;
+  font-size: 0.85rem;
+  color: #6b7280;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .tiny-link:hover {
-  color: var(--teal-deep);
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+.tiny-link.text-primary {
+  color: var(--teal) !important;
+  font-weight: 600;
+}
+
+.tiny-link.text-primary:hover {
+  color: var(--teal-deep) !important;
+  text-decoration: underline;
+}
+
+/* Hide mobile signup/signin links on desktop (Windows platform) */
+@media (min-width: 993px) {
+  .text-center .text-muted + .tiny-link.text-primary.signup-link,
+  .text-center .text-muted + .tiny-link.text-primary.signin-link {
+    display: none;
+  }
 }
 
 .action-btn {
@@ -328,23 +348,40 @@ body {
 
 @media (max-width: 992px) {
   .auth-shell {
-    min-height: 780px;
+    height: auto;
+    min-height: auto;
     border-radius: 12px;
+    overflow: visible;
   }
 
   .overlay-panel {
-    position: static;
-    width: 100%;
-    height: 230px;
-    transform: none !important;
+    display: none;
   }
 
   .form-side {
     width: 100%;
     left: 0;
-    top: 230px;
-    height: calc(100% - 230px);
-    padding: 1rem 0;
+    top: 0;
+    height: auto;
+    padding: 2rem 1rem 0.5rem 1rem;
+    align-items: flex-start;
+    display: block;
+  }
+
+  .form-wrap {
+    width: min(360px, 86%);
+    text-align: center;
+    margin: 2rem auto 0 auto;
+    padding-bottom: 0;
+  }
+
+  .form-side form {
+    margin-bottom: 0;
+  }
+
+  .text-center.mt-3 {
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
 
   .sign-in-side,
@@ -361,52 +398,9 @@ body {
   }
 
   .auth-shell {
-    min-height: auto;
-    height: auto;
+    min-height: 760px;
     width: 100%;
     box-shadow: 0 12px 28px rgba(20, 35, 45, 0.12);
-  }
-
-  .overlay-panel {
-    height: 210px;
-  }
-
-  .overlay-content {
-    padding: 1.25rem;
-  }
-
-  .overlay-content h2 {
-    font-size: clamp(1.55rem, 7vw, 2rem);
-    margin-bottom: 0.5rem;
-  }
-
-  .overlay-content p {
-    font-size: 0.92rem;
-  }
-
-  /* Mobile: shrink-wrap card to content (remove big whitespace) */
-  .form-side {
-    position: relative;
-    top: auto;
-    height: auto;
-    padding-bottom: 1.25rem;
-  }
-
-  .sign-in-side,
-  .sign-up-side {
-    left: auto;
-    right: auto;
-    transform: none !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-  }
-
-  .auth-shell:not(.is-signup) .sign-up-side {
-    display: none;
-  }
-
-  .auth-shell.is-signup .sign-in-side {
-    display: none;
   }
 
   .form-wrap {
@@ -438,15 +432,6 @@ body {
   .auth-shell {
     min-height: 740px;
     border-radius: 10px;
-  }
-
-  .overlay-panel {
-    height: 196px;
-  }
-
-  .form-side {
-    top: 196px;
-    height: calc(100% - 196px);
   }
 
   .brand-mark {
