@@ -19,13 +19,6 @@
   <body>
     <main class="auth-page container py-4 py-md-5">
       <section class="auth-shell" id="authShell">
-        <!-- Mobile toggle for switching between sign in and sign up -->
-        <div class="mobile-toggle" id="mobileToggle">
-          <button type="button" class="mobile-toggle-btn active" data-form="signin">Sign In</button>
-          <button type="button" class="mobile-toggle-btn" data-form="signup">Sign Up</button>
-          <div class="mobile-toggle-indicator"></div>
-        </div>
-        
         <div class="form-side sign-up-side">
           <div class="form-wrap">
             <img src="diaricorelogo.png" alt="DiariCore logo" class="brand-mark" />
@@ -88,6 +81,10 @@
               </div>
               <div class="text-end mb-4"><a href="#" class="tiny-link">Forgot password?</a></div>
               <button type="submit" class="btn action-btn mb-3">Sign In</button>
+              <div class="text-center mt-3">
+                <span class="text-muted">Don't have an account? </span>
+                <a href="#" class="signup-link tiny-link">Sign up</a>
+              </div>
               <div class="social-divider"><span>or continue with</span></div>
               <button type="button" class="btn continue-btn mt-3">
                 <span class="google-icon" aria-hidden="true">
@@ -123,8 +120,7 @@
       (function () {
         const shell = document.getElementById("authShell");
         const switchers = document.querySelectorAll(".switch-btn");
-        const mobileToggle = document.getElementById("mobileToggle");
-        const mobileToggleBtns = mobileToggle?.querySelectorAll(".mobile-toggle-btn");
+        const mobileSignupLink = document.querySelector(".signup-link");
         
         // Desktop overlay switchers
         switchers.forEach((btn) => {
@@ -135,28 +131,10 @@
           });
         });
 
-        // Mobile toggle functionality
-        mobileToggleBtns?.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const formType = btn.dataset.form;
-            const signUpSide = document.querySelector(".sign-up-side");
-            const signInSide = document.querySelector(".sign-in-side");
-            
-            // Update active button
-            mobileToggleBtns.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            
-            // Update toggle indicator position
-            if (formType === "signup") {
-              mobileToggle.classList.add("sign-up");
-              signUpSide.classList.add("active");
-              signInSide.classList.add("hidden");
-            } else {
-              mobileToggle.classList.remove("sign-up");
-              signUpSide.classList.remove("active");
-              signInSide.classList.remove("hidden");
-            }
-          });
+        // Mobile signup link functionality
+        mobileSignupLink?.addEventListener("click", (e) => {
+          e.preventDefault();
+          shell.classList.add("is-signup");
         });
 
         // Password visibility toggle
