@@ -47,10 +47,10 @@ body {
 }
 
 .sign-up-side {
-  right: 0;
+  left: 0;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(8%);
+  transform: translateX(-8%);
 }
 
 .sign-in-side {
@@ -105,10 +105,10 @@ body {
 .input-group-float label {
   position: absolute;
   left: 0.95rem;
-  top: 0.6rem;
-  transform: translateY(0);
+  top: 50%;
+  transform: translateY(-50%);
   color: #9aa3ad;
-  font-size: 0.74rem;
+  font-size: 0.92rem;
   pointer-events: none;
   background: #ffffff;
   padding: 0 0.28rem;
