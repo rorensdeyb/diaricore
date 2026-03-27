@@ -347,11 +347,6 @@ body {
 }
 
 @media (max-width: 992px) {
-  .auth-page {
-    min-height: auto;
-    padding: 1rem 0;
-  }
-
   .auth-shell {
     height: auto;
     min-height: auto;
@@ -386,7 +381,7 @@ body {
 
   .text-center.mt-3 {
     margin-top: 1rem;
-    margin-bottom: -1rem;
+    margin-bottom: 0;
   }
 
   .sign-in-side,
