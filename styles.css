@@ -44,6 +44,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: transform 0.6s ease, opacity 0.5s ease;
+  z-index: 5;
 }
 
 .sign-up-side {
@@ -89,7 +90,7 @@ body {
   border-radius: 8px;
   background: #ffffff;
   font-size: 0.98rem;
-  padding: 1.08rem 0.95rem 0.5rem;
+  padding: 1.08rem 2.7rem 0.5rem 0.95rem;
 }
 
 .form-control:focus {
@@ -113,6 +114,38 @@ body {
   background: #ffffff;
   padding: 0 0.28rem;
   transition: all 0.2s ease;
+}
+
+.field-icon {
+  position: absolute;
+  right: 0.82rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b1b9c5;
+  width: 1rem;
+  height: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.field-icon svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.field-icon-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.field-icon-btn:hover {
+  color: #8190a3;
 }
 
 .input-group-float .form-control:focus + label,
@@ -279,17 +312,17 @@ body {
   border-color: #cfd7df;
 }
 
-.google-g {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+.google-icon {
+  width: 20px;
+  height: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #ea4335;
-  border: 1px solid #e2e8f0;
+}
+
+.google-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 992px) {
