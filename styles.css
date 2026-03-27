@@ -27,7 +27,7 @@ body {
 
 .auth-shell {
   width: min(1000px, 100%);
-  min-height: 620px;
+  min-height: 500px;
   background: #ffffff;
   border-radius: 14px;
   box-shadow: 0 18px 46px rgba(20, 35, 45, 0.16);
@@ -177,6 +177,14 @@ body {
 .tiny-link.text-primary:hover {
   color: var(--teal-deep) !important;
   text-decoration: underline;
+}
+
+/* Hide mobile signup/signin links on desktop (Windows platform) */
+@media (min-width: 993px) {
+  .text-center .text-muted + .tiny-link.text-primary.signup-link,
+  .text-center .text-muted + .tiny-link.text-primary.signin-link {
+    display: none;
+  }
 }
 
 .action-btn {
