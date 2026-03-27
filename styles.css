@@ -348,8 +348,8 @@ body {
 
 @media (max-width: 992px) {
   .auth-shell {
-    height: auto;
-    min-height: auto;
+    height: auto !important;
+    min-height: 500px !important;
     border-radius: 12px;
     overflow: visible;
   }
@@ -372,8 +372,8 @@ body {
   .form-wrap {
     width: min(360px, 86%);
     text-align: center;
-    margin: 2rem auto 0 auto;
-    padding-bottom: 0;
+    margin: 2rem auto -8rem auto !important;
+    padding-bottom: 0 !important;
   }
 
   .form-side form {
