@@ -20,6 +20,7 @@ body {
   border-radius: 1.2rem;
   background: var(--diari-card);
   backdrop-filter: blur(7px);
+  overflow: visible;
 }
 
 .ad-panel {
@@ -27,7 +28,8 @@ body {
   color: #1f2a37;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
   border-right: 1px solid #d9e7e4;
   min-height: 100%;
 }
@@ -82,6 +84,7 @@ body {
 
 .auth-pane {
   background: rgba(255, 255, 255, 0.9);
+  min-height: 100%;
 }
 
 .brand-logo {
