@@ -352,6 +352,7 @@ body {
     min-height: 500px !important;
     border-radius: 12px;
     overflow: visible;
+    padding-bottom: 0 !important;
   }
 
   .overlay-panel {
