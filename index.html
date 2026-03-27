@@ -19,6 +19,13 @@
   <body>
     <main class="auth-page container py-4 py-md-5">
       <section class="auth-shell" id="authShell">
+        <!-- Mobile toggle for switching between sign in and sign up -->
+        <div class="mobile-toggle" id="mobileToggle">
+          <button type="button" class="mobile-toggle-btn active" data-form="signin">Sign In</button>
+          <button type="button" class="mobile-toggle-btn" data-form="signup">Sign Up</button>
+          <div class="mobile-toggle-indicator"></div>
+        </div>
+        
         <div class="form-side sign-up-side">
           <div class="form-wrap">
             <img src="diaricorelogo.png" alt="DiariCore logo" class="brand-mark" />
@@ -116,6 +123,10 @@
       (function () {
         const shell = document.getElementById("authShell");
         const switchers = document.querySelectorAll(".switch-btn");
+        const mobileToggle = document.getElementById("mobileToggle");
+        const mobileToggleBtns = mobileToggle?.querySelectorAll(".mobile-toggle-btn");
+        
+        // Desktop overlay switchers
         switchers.forEach((btn) => {
           btn.addEventListener("click", () => {
             const mode = btn.dataset.mode;
@@ -124,6 +135,31 @@
           });
         });
 
+        // Mobile toggle functionality
+        mobileToggleBtns?.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const formType = btn.dataset.form;
+            const signUpSide = document.querySelector(".sign-up-side");
+            const signInSide = document.querySelector(".sign-in-side");
+            
+            // Update active button
+            mobileToggleBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            
+            // Update toggle indicator position
+            if (formType === "signup") {
+              mobileToggle.classList.add("sign-up");
+              signUpSide.classList.add("active");
+              signInSide.classList.add("hidden");
+            } else {
+              mobileToggle.classList.remove("sign-up");
+              signUpSide.classList.remove("active");
+              signInSide.classList.remove("hidden");
+            }
+          });
+        });
+
+        // Password visibility toggle
         document.querySelectorAll(".toggle-password").forEach((button) => {
           button.addEventListener("click", () => {
             const targetId = button.getAttribute("data-target");
