@@ -387,7 +387,7 @@ body {
   /* Reduce space below signup link on mobile */
   @media (max-width: 992px) {
     .text-center.mt-3 {
-      margin-bottom: -3rem;
+      margin-bottom: -6rem;
     }
   }
 
