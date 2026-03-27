@@ -21,9 +21,18 @@
             <h1 class="auth-title">Create Account</h1>
             <p class="auth-lead">Build your private space for reflection and growth.</p>
             <form action="#" method="post">
-              <input type="text" class="form-control form-control-lg mb-3" placeholder="Name" required />
-              <input type="email" class="form-control form-control-lg mb-3" placeholder="Email" required />
-              <input type="password" class="form-control form-control-lg mb-4" placeholder="Password" required />
+              <div class="input-group-float mb-3">
+                <input id="signupName" type="text" class="form-control form-control-lg" placeholder=" " required />
+                <label for="signupName">Name</label>
+              </div>
+              <div class="input-group-float mb-3">
+                <input id="signupEmail" type="email" class="form-control form-control-lg" placeholder=" " required />
+                <label for="signupEmail">Email</label>
+              </div>
+              <div class="input-group-float mb-4">
+                <input id="signupPassword" type="password" class="form-control form-control-lg" placeholder=" " required />
+                <label for="signupPassword">Password</label>
+              </div>
               <button type="submit" class="btn action-btn">Sign Up</button>
             </form>
           </div>
@@ -35,8 +44,14 @@
             <h1 class="auth-title">Sign In to DiariCore</h1>
             <p class="auth-lead">Continue your journaling journey with mindful insights.</p>
             <form action="#" method="post">
-              <input type="email" class="form-control form-control-lg mb-3" placeholder="Email" required />
-              <input type="password" class="form-control form-control-lg mb-2" placeholder="Password" required />
+              <div class="input-group-float mb-3">
+                <input id="signinEmail" type="email" class="form-control form-control-lg" placeholder=" " required />
+                <label for="signinEmail">Email</label>
+              </div>
+              <div class="input-group-float mb-2">
+                <input id="signinPassword" type="password" class="form-control form-control-lg" placeholder=" " required />
+                <label for="signinPassword">Password</label>
+              </div>
               <div class="text-end mb-4"><a href="#" class="tiny-link">Forgot password?</a></div>
               <button type="submit" class="btn action-btn">Sign In</button>
             </form>
@@ -64,7 +79,9 @@
         const switchers = document.querySelectorAll(".switch-btn");
         switchers.forEach((btn) => {
           btn.addEventListener("click", () => {
-            shell.classList.toggle("show-signin", btn.dataset.mode === "signup");
+            const mode = btn.dataset.mode;
+            if (mode === "signup") shell.classList.add("is-signup");
+            if (mode === "signin") shell.classList.remove("is-signup");
           });
         });
       })();
