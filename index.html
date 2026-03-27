@@ -64,7 +64,7 @@
         const switchers = document.querySelectorAll(".switch-btn");
         switchers.forEach((btn) => {
           btn.addEventListener("click", () => {
-            shell.classList.toggle("show-signin", btn.dataset.mode === "signin");
+            shell.classList.toggle("show-signin", btn.dataset.mode === "signup");
           });
         });
       })();
