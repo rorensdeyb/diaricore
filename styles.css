@@ -398,7 +398,7 @@ body {
   }
 
   .auth-shell {
-    min-height: 760px;
+    min-height: auto;
     width: 100%;
     box-shadow: 0 12px 28px rgba(20, 35, 45, 0.12);
   }
@@ -430,7 +430,7 @@ body {
 
 @media (max-width: 480px) {
   .auth-shell {
-    min-height: 740px;
+    min-height: auto;
     border-radius: 10px;
   }
 
