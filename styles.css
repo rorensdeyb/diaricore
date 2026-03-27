@@ -249,7 +249,8 @@ body {
 
 @media (max-width: 992px) {
   .auth-shell {
-    min-height: 740px;
+    min-height: 780px;
+    border-radius: 12px;
   }
 
   .overlay-panel {
@@ -264,6 +265,7 @@ body {
     left: 0;
     top: 230px;
     height: calc(100% - 230px);
+    padding: 1rem 0;
   }
 
   .sign-in-side,
@@ -271,5 +273,102 @@ body {
   .auth-shell.is-signup .sign-in-side,
   .auth-shell.is-signup .sign-up-side {
     transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-page {
+    padding-inline: 0.75rem !important;
+  }
+
+  .auth-shell {
+    min-height: 760px;
+    width: 100%;
+    box-shadow: 0 12px 28px rgba(20, 35, 45, 0.12);
+  }
+
+  .overlay-panel {
+    height: 210px;
+  }
+
+  .overlay-content {
+    padding: 1.25rem;
+  }
+
+  .overlay-content h2 {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .overlay-content p {
+    font-size: 0.92rem;
+  }
+
+  .form-side {
+    top: 210px;
+    height: calc(100% - 210px);
+  }
+
+  .form-wrap {
+    width: min(420px, 92%);
+  }
+
+  .auth-title {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+  }
+
+  .auth-lead {
+    font-size: 0.94rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .action-btn,
+  .ghost-btn {
+    width: 100%;
+    max-width: 230px;
+    min-height: 44px;
+  }
+
+  .form-control {
+    min-height: 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-shell {
+    min-height: 740px;
+    border-radius: 10px;
+  }
+
+  .overlay-panel {
+    height: 196px;
+  }
+
+  .form-side {
+    top: 196px;
+    height: calc(100% - 196px);
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.65rem;
+  }
+
+  .form-wrap {
+    width: 94%;
+  }
+
+  .tiny-link {
+    font-size: 0.82rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-side,
+  .overlay-panel,
+  .overlay-content,
+  .input-group-float label {
+    transition: none !important;
   }
 }
