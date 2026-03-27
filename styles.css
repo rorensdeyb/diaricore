@@ -348,7 +348,7 @@ body {
 
 @media (max-width: 992px) {
   .auth-shell {
-    min-height: 500px;
+    min-height: 450px;
     border-radius: 12px;
   }
 
@@ -364,7 +364,7 @@ body {
     padding: 1rem 0;
     align-items: flex-start;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
   }
 
   .form-wrap {
