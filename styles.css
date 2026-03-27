@@ -90,8 +90,9 @@ body {
   border-radius: 8px;
   background: #ffffff;
   font-size: 0.98rem;
-  line-height: 1.35;
-  padding: 1.08rem 3.1rem 0.72rem 0.95rem;
+  line-height: 1.2;
+  min-height: 48px;
+  padding: 0.96rem 3.1rem 0.92rem 0.95rem;
 }
 
 .form-control:focus {
@@ -122,19 +123,18 @@ body {
   right: 0.82rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #b1b9c5;
-  width: 1.2rem;
-  height: 1.2rem;
+  color: #7b8796;
+  width: 1.35rem;
+  height: 1.35rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
 }
 
-.field-icon svg {
-  width: 1.2rem;
-  height: 1.2rem;
-  fill: currentColor;
+.field-icon i {
+  font-size: 1.05rem;
+  line-height: 1;
 }
 
 .field-icon-btn {
@@ -146,7 +146,7 @@ body {
 }
 
 .field-icon-btn:hover {
-  color: #8190a3;
+  color: #59697e;
 }
 
 .input-group-float .form-control:focus + label,
